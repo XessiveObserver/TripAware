@@ -1,0 +1,20 @@
+<div class="my-3">
+        <div class="py-3">
+            <div class="bg-purple-100 py-3 text-violet-500 text-3xl rounded">
+                <p class="ml-3 font-mono"> <%= trip.name %> trip</p>
+            </div>
+            <div>
+                <b>Origin:</b> <em><%= trip.origin %></em>
+            </div>
+            <div>
+                <b>Destination:</b> <em><%= trip.destination %></em>
+            </div>
+            <div>
+                <p class="text-violet-500 font-semibold">
+                     <%= link_to "Click here for more of #{trip.name} trip", trip_path(trip), class: "underline",
+                    data: {turb_frame: "_top"} %> 
+                </p>
+            </div>
+        </div>
+
+</div>

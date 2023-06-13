@@ -1,0 +1,32 @@
+<%= form_with model: [ @trip, @pit_stop ] do |form| %>
+    <% if @pit_stop.errors.any? %>
+       <h2> <%= pluralize(@pit_stop.errors.count, "error") %> </h2>
+
+        <ul>
+            <% @pit_stop.errors.full_messages.each do |error| %>
+               <li><%= error %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :location %>
+        <%= form.text_field :location %>
+    </div>
+
+    <div>
+        <%= form.label :remarks %>
+        <%= form.text_area :remarks %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+        <%= link_to "<- Back ", :back,
+         data: {turbo_frame: "_top"} %>
+    </div>
+<% end %>

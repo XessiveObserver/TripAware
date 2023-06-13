@@ -1,0 +1,15 @@
+<div class="mx-auto w-7/12">
+    <%= turbo_frame_tag @trip do %>
+        
+        <%= render "trips/show_trip" %>
+
+    <% end %>
+
+    <div>
+        <%= turbo_frame_tag "pit_stop" do %>
+            <%= render "pit_stops/pit_stop" %>
+        <% end %>
+    </div>
+
+    
+</div>
