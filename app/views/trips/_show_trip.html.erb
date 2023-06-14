@@ -16,38 +16,38 @@
 
     <div class="mt-2">
         <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
                 Origin :
             </div>
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
+            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
                 <%= @trip.origin %>
             </div>
         </div>
 
         <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
                 Destination :
             </div>
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
+            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
                 <%= @trip.destination %>
             </div>
         </div>
 
-        <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-500 p-3 text-white font-bold">
-                Reason :
-            </div>
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
-                <%= @trip.reason %>
-            </div>
-        </div>
 
         <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
                 For how long :
             </div>
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
+            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
                 <%= @trip.for_how_long %>
+            </div>
+        </div>
+        <div class="sm:flex sm:flex-row p-[0.1rem]">
+            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
+                Reason :
+            </div>
+            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
+                <%= @trip.reason %>
             </div>
         </div>
     </div>

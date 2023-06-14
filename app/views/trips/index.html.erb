@@ -3,7 +3,8 @@
     <%= turbo_frame_tag "new_trip" do %>
         <div class="text-right mb-5">
             <%= link_to " + Add a trip", new_trip_path,
-            class: "bg-violet-500 text-white font-bold p-3 py-3 rounded" %>
+            class: "bg-violet-500 text-white font-bold p-3 py-3 rounded",
+            data: {turbo_frame: "_top"} %>
         </div>
     <% end %>
     <hr>

@@ -6,7 +6,7 @@
     <div class="mb-5 text-right">
         <%= link_to "+ New pit stop", new_trip_pit_stop_path(@trip, @pit_stop),
         class: "text-white font-bold bg-sky-500 text p-3 rounded",
-        data: {turb_frame: "_top"} %>
+        data: {turbo_frame: "pit_stop"} %>
     </div><hr>
 
     <% @trip.pit_stops.each do |pit_stop| %>
@@ -14,33 +14,34 @@
     
 
         <div class="sm:flex sm:flex-row p-[0.1rem] mt-3">
-            <div class="basis-1/2 bg-stone-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
                 Name :
             </div>
-            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
+            <div class="basis-1/2 bg-stone-100 p-3 text-stone-500">
                 <%= pit_stop.name %>
             </div>
         </div>
         <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-stone-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
                 Location :
             </div>
-            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
+            <div class="basis-1/2 bg-stone-100 p-3 text-stone-500">
                 <%= pit_stop.location %>
             </div>
         </div>
         <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-stone-500 p-3 text-white font-bold">
+            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
                 Remarks :
             </div>
-            <div class="basis-1/2 bg-stone-200 p-3 text-stone-500 font-bold">
+            <div class="basis-1/2 bg-stone-100 p-3 text-stone-500">
                 <%= pit_stop.remarks %>
             </div>
         </div>
     
         <div class="mt-5 text-right space-x-3 mb-5">
             <%= link_to "Edit pit stop", edit_trip_pit_stop_path(@trip, pit_stop),
-            class: "text-white font-bold bg-blue-500 p-3 rounded" %>
+            class: "text-white font-bold bg-blue-500 p-3 rounded",
+            turbo_frame: "pit_stop" %>
             <%= link_to "Destroy Pit stop", [pit_stop.trip, pit_stop], data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?",
