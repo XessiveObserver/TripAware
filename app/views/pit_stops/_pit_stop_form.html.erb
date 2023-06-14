@@ -1,32 +1,43 @@
 <%= form_with model: [ @trip, @pit_stop ] do |form| %>
-    <% if @pit_stop.errors.any? %>
-       <h2> <%= pluralize(@pit_stop.errors.count, "error") %> </h2>
+    <div class="mx-auto space0y-3 w-full mb-3">
 
-        <ul>
-            <% @pit_stop.errors.full_messages.each do |error| %>
-               <li><%= error %></li>
-            <% end %>
-        </ul>
-    <% end %>
+        <div class="text-right pb-3 mb-5">
+            <%= link_to "<- Back ", :back,
+                data: {turbo_frame: "_top"}, 
+                class: "back-btn"%>
+        </div>
+        <hr>
 
-    <div>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
-    </div>
+        <% if @pit_stop.errors.any? %>
+        <h2 class="text-red-500 bg-red-100 p-3 font-bold rounded mt-3"> 
+            <%= pluralize(@pit_stop.errors.count, "error") %>
+        </h2>
 
-    <div>
-        <%= form.label :location %>
-        <%= form.text_field :location %>
-    </div>
+            <ul class="ml-5 mb-2">
+                <% @pit_stop.errors.full_messages.each do |error| %>
+                <li class="text-red-500 font-mono list-disc"><%= error %></li>
+                <% end %>
+            </ul>
+            <hr>
+        <% end %>
 
-    <div>
-        <%= form.label :remarks %>
-        <%= form.text_area :remarks %>
-    </div>
+        <div class="mt-3">
+            <%= form.label :name, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :name, class: "text-field" %>
+        </div>
 
-    <div>
-        <%= form.submit %>
-        <%= link_to "<- Back ", :back,
-         data: {turbo_frame: "_top"} %>
+        <div>
+            <%= form.label :location, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :location, class: "text-field" %>
+        </div>
+
+        <div>
+            <%= form.label :remarks, class: "text-violet-700 font-semibold" %>
+            <%= form.text_area :remarks, class: "rich-text" %>
+        </div>
+
+        <div>
+            <%= form.submit(class: "submit-btn") %>
+        </div>
     </div>
 <% end %>

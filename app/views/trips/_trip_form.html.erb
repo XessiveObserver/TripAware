@@ -1,42 +1,49 @@
 <%= form_with(model: trip) do |form| %>
-    <% if trip.errors.any? %>
-       <h2> <%= pluralize(trip.errors.count, "error") %> </h2>
+    <div class="mx-auto space-y-3 w-full mb-3">
+        <div class="text-right pb-3">
+            <%= link_to "<- Back ", :back,
+                data: {turbo_frame: "_top"}, 
+                class: "back-btn"%>
+        </div>
+        <% if trip.errors.any? %>
+        <h2 class="text-red-500 bg-red-100 p-3 font-bold rounded"> <%= pluralize(trip.errors.count, "error") %> </h2>
 
-        <ul>
-            <% trip.errors.each do |error| %>
-                <li><%= error.full_message %></li>
-            <% end %>
-        </ul>
-    <% end %>
+            <ul class="ml-5">
+                <% trip.errors.each do |error| %>
+                    <li class="text-red-500 font-mono list-disc"><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        <% end %>
+        <hr>
+        <h2 class="font-bold text-violet-600 text-3xl pb-3">Create a new trip below</h2><hr>
 
-    <div>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
-    </div>
+        <div>
+            <%= form.label :name, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :name, class: "text-field" %>
+        </div>
 
-    <div>
-        <%= form.label :origin %>
-        <%= form.text_field :origin %>
-    </div>
+        <div>
+            <%= form.label :origin, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :origin, class: "text-field" %>
+        </div>
 
-    <div>
-        <%= form.label :destination %>
-        <%= form.text_field :destination %>
-    </div>
+        <div>
+            <%= form.label :destination, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :destination, class: "text-field" %>
+        </div>
 
-    <div>
-        <%= form.label :reason %>
-        <%= form.text_area :reason %>
-    </div>
+        <div>
+            <%= form.label :reason, class: "text-violet-700 font-semibold" %>
+            <%= form.text_area :reason, class: "rich-text" %>
+        </div>
 
-    <div>
-        <%= form.label :for_how_long %>
-        <%= form.text_field :for_how_long %>
-    </div>
+        <div>
+            <%= form.label :for_how_long, class: "text-violet-700 font-semibold" %>
+            <%= form.text_field :for_how_long, class: "text-field" %>
+        </div>
 
-    <div>
-        <%= form.submit %>
-        <%= link_to "<- Back ", :back,
-         data: {turbo_frame: "_top"} %>
+        <div>
+            <%= form.submit(class: "submit-btn")%>
+        </div>
     </div>
 <% end %>

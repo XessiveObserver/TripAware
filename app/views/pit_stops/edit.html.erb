@@ -1,6 +1,8 @@
 <%= turbo_frame_tag "pit_stop" do %>
     <div>
-        <h1>Edit pit stop </h1>
+        <h1 class="text-center font-bold text-2xl text-white bg-violet-500 p-3 my-5 rounded">
+            Edit pit stop
+        </h1>
         <%= render partial: "pit_stop_form", pit_stop: @pit_stop %>
     </div>
 <% end %>

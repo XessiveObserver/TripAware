@@ -2,12 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+
 
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  .text-field {
+    @apply rounded form-input h-[3rem] w-full text-violet-700 font-normal
+        shadow-sm border-violet-300 focus:outline-none focus:border-violet-300 focus:ring-1 focus:ring-violet-500 ;
+  }
+  .email-field {
+    @apply rounded form-input h-[3rem] w-full text-violet-700 font-normal
+        shadow-sm border-violet-300 focus:outline-none focus:border-violet-300 focus:ring-1 focus:ring-violet-500 ;
+  }
+  .file-field {
+    @apply rounded form-input h-[3rem] m-0 w-full text-violet-700 font-normal
+        shadow-sm border-violet-300 focus:outline-none focus:border-violet-300 focus:ring-1 focus:ring-violet-500 ;
+  }
+  .rich-text {
+    @apply rounded h-full form-textarea w-full relative  text-violet-700 font-normal
+        shadow-sm border-violet-300 focus:outline-none focus:border-violet-300 focus:ring-1 focus:ring-violet-500 ;
+  }
+  .password-field {
+    @apply rounded form-input h-[3rem] w-full text-violet-700 font-normal
+        shadow-sm border-violet-300 focus:outline-none focus:border-violet-300 focus:ring-1 focus:ring-violet-500 ;
+  }
+  .submit-btn {
+    @apply text-white text-xl bg-violet-400 
+        p-3 w-full rounded cursor-pointer font-bold
+        hover:text-violet-50 hover:bg-violet-500;
+  }
+  .back-btn {
+    @apply text-white font-bold p-3 w-full  rounded cursor-pointer bg-cyan-500
   }
 }
 
-*/
+
