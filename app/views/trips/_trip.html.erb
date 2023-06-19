@@ -1,17 +1,18 @@
 <div class="my-5">
-        <div class="py-3">
-            <div class="bg-purple-100 py-3 text-violet-500 text-3xl rounded">
-                <p class="ml-3 font-mono"> <%= trip.name %> trip</p>
+        <div class="py-3 shadow shadow-slate-500 rounded">
+            <div class="bg-slate-200 py-3 text-slate-500 text-3xl ">
+                <p class="ml-3 font-mono font-bold"> <%= trip.name %> trip</p>
+            </div>
+            <div class="mx-3 py-3">
+                <p class="bg-stone-300 p-2 font-bold">Origin</p> 
+                <p class="bg-stone-100 p-2"><%= trip.origin %></p>
+            
+                <p class="bg-stone-300 p-2 font-bold">Destination</p>
+                <p class="bg-stone-100 p-2"><%= trip.destination %></p>
             </div>
             <div>
-                <b>Origin:</b> <em><%= trip.origin %></em>
-            </div>
-            <div>
-                <b>Destination:</b> <em><%= trip.destination %></em>
-            </div>
-            <div>
-                <p class="text-violet-500 font-semibold">
-                     <%= link_to "Click here for more of #{trip.name} trip", trip_path(trip), class: "underline",
+                <p class="text-slate-500 font-semibold p-3">
+                    Click here -> <%= link_to "for more of #{trip.name} trip", trip_path(trip), class: "underline",
                     data: {turb_frame: "_top"} %> 
                 </p>
             </div>
