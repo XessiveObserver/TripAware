@@ -1,5 +1,5 @@
 <div class="">
-    <div class="underline text-gray-600 rounded text-4xl text-center font-bold p-3">
+    <div class="bg-gray-200 text-gray-600 rounded text-4xl text-center font-bold p-[0.1rem] mb-5">
         <h1 class="m-3"><%= @trip.name %> Trip<h1>
     </div>
 
@@ -10,46 +10,40 @@
         <%= link_to "Edit trip", edit_trip_path(@trip),
         class: "bg-blue-500 text-white p-3 rounded font-semibold" %>
         <%= link_to "Delete trip", trip_path(@trip), 
-        data: {turbo_method: :delete, turbo_confirm: "Are your sure ?"},
+        data: {turbo_method: :delete, turbo_confirm: "Are your sure ?",
+        turbo_frame: "_top"},
         class: "bg-red-700 text-white p-3 rounded font-semibold" %>
     </div><hr>
 
-    <div class="mt-2">
-        <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
-                Origin :
+    <div class="mt-2">        
+            <div class="bg-gray-200 p-3 text-gray-600 font-bold">
+                Origin 
             </div>
-            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
+            <div class="bg-gray-100 p-3 text-gray-600">
                 <%= @trip.origin %>
             </div>
-        </div>
-
-        <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
-                Destination :
+        
+            <div class="bg-gray-200 p-3 text-gray-600 font-bold">
+                Destination
             </div>
-            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
+            <div class="bg-gray-100 p-3 text-gray-600">
                 <%= @trip.destination %>
             </div>
-        </div>
-
-
-        <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
-                For how long :
+        
+            <div class="bg-gray-200 p-3 text-gray-600 font-bold">
+                For how long
             </div>
-            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
+            <div class="bg-gray-100 p-3 text-gray-600">
                 <%= @trip.for_how_long %>
+            </div>        
+        
+            <div class="bg-gray-200 p-3 text-gray-600 font-bold">
+                Reason
             </div>
-        </div>
-        <div class="sm:flex sm:flex-row p-[0.1rem]">
-            <div class="basis-1/2 bg-gray-200 p-3 text-gray-500 font-bold">
-                Reason :
-            </div>
-            <div class="basis-1/2 bg-gray-100 p-3 text-gray-500">
+            <div class="bg-gray-100 p-3 text-gray-600">
                 <%= @trip.reason %>
             </div>
-        </div>
+        
     </div>
     
 </div>

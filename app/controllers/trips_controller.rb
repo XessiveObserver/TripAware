@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
     def index
         #display trips for a particular user
-        @trips = current_user.trips.all
+        @trips = current_user.trips.all.order(created_at: :desc)
     end
 
     def show
@@ -16,7 +16,7 @@ class TripsController < ApplicationController
         @trip = current_user.trips.build(trip_params)
 
         if @trip.save
-            redirect_to @trip, notice: "Trip was successfully created."
+            redirect_to trips_path, notice: "Trip was successfully created."
         else
             render :new, status: :unprocessable_entity
         end
@@ -39,7 +39,7 @@ class TripsController < ApplicationController
         @trip = Trip.find(params[:id])
         @trip.destroy
         
-        redirect_to root_path, status: :see_other, notice: "Trip was successfully deleted."
+        redirect_to @trip, status: :see_other, notice: "Trip was successfully deleted."
     end
 
     private
