@@ -11,8 +11,8 @@
                 <p class="bg-stone-100 p-2"><%= trip.destination %></p>
             </div>
             <div>
-                <p class="text-slate-500 font-semibold p-3">
-                    Click here -> <%= link_to "for more of #{trip.name} trip", trip_path(trip), class: "underline",
+                <p class="text-blue-500 font-semibold p-3">
+                    Click here -> <%= link_to "for more on #{trip.name} trip", trip_path(trip), class: "underline",
                     data: {turb_frame: "_top"} %> 
                 </p>
             </div>
