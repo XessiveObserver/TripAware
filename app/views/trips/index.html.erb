@@ -10,11 +10,16 @@
     <hr>
 
     <div class="mt-5 rounded">
-        <h1 class="text-4xl text-center p-3 py-3 text-slate-500 font-bold bg-slate-200 rounded">Trips Made</h1>
+        <h1 class="border-l-4 border-slate-600 text-4xl text-center p-3 py-3 text-slate-500 font-bold bg-slate-200 rounded">Trips Made</h1>
     </div>
 
     <div>
+    <% if @trips.present? %>
         <%= render @trips %>
+    <% else %>
+        <p class="bg-slate-200 font-bold p-3 text-center border-l-4 border-cyan-600">You've no trips yet ...</p>
+    <% end %>
+
     </div>
 
 </div>
