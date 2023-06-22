@@ -1,9 +1,8 @@
-<div class="mx-auto flex flex-col w-7/12">
-    
+<div class="mx-auto sm:flex sm:flex-col w-7/12">   
     
         <div class="text-right mb-5">
             <%= link_to " + Add a trip", new_trip_path,
-            class: "bg-slate-500 text-white font-bold p-3 py-3 rounded",
+            class: "bg-slate-200 text-slate-500 font-bold p-3 py-3 rounded",
             data: {turbo_frame: "new_trip"} %>
         </div>
    
@@ -14,11 +13,11 @@
     </div>
 
     <div>
-    <% if @trips.present? %>
-        <%= render @trips %>
-    <% else %>
-        <p class="bg-slate-200 font-bold p-3 text-center border-l-4 border-cyan-600">You've no trips yet ...</p>
-    <% end %>
+        <% if @trips.present? %>
+            <%= render @trips %>
+        <% else %>
+            <p class="bg-slate-200 font-bold p-3 text-center border-l-4 border-cyan-600">You've no trips yet ...</p>
+        <% end %>
 
     </div>
 

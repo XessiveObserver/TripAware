@@ -26,12 +26,12 @@
         shadow-sm border-gray-300 focus:outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-500 ;
   }
   .submit-btn {
-    @apply text-white text-xl bg-gray-400 
+    @apply text-white text-xl bg-gray-500 
         p-3 w-full rounded cursor-pointer font-bold
-        hover:text-gray-50 hover:bg-gray-500;
+        ;
   }
   .back-btn {
-    @apply text-white font-bold p-3 w-full  rounded cursor-pointer bg-slate-500
+    @apply text-slate-500 font-bold p-3 w-full  rounded cursor-pointer bg-slate-200
   }
 }
 

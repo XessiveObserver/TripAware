@@ -1,18 +1,18 @@
 <div class="shadow p-5 shadow-slate-400 my-3 rounded">
-    <div class="border-l-4 border-slate-600 bg-gray-200 text-gray-600 rounded text-4xl text-center font-bold p-[0.1rem] mb-5">
+    <div class="border-l-4 border-slate-600 bg-gray-200 text-gray-600 rounded text-4xl text-center font-bold p-[0.1rem] mb-20">
         <h1 class="m-3"><%= @trip.name %> Trip<h1>
     </div>
 
-    <div class="text-right mb-5 space-x-3">
+    <div class=" flex items-end justify-end mb-5 space-x-3">
         <%= link_to "<- Back to trips", trips_path,
-         class:"text-white bg-teal-500 p-3 rounded font-bold",
+         class:"text-teal-500 bg-teal-100 p-3 rounded font-bold",
          data: {turbo_frame: "_top"} %>
         <%= link_to "Edit trip", edit_trip_path(@trip),
-        class: "bg-blue-500 text-white p-3 rounded font-semibold" %>
+        class: "bg-blue-100 text-blue-500 p-3 rounded font-bold" %>
         <%= link_to "Delete trip", trip_path(@trip), 
         data: {turbo_method: :delete, turbo_confirm: "Are your sure ?",
         turbo_frame: "_top"},
-        class: "bg-red-700 text-white p-3 rounded font-semibold" %>
+        class: "bg-red-100 text-red-500 p-3 rounded font-bold" %>
     </div><hr>
 
     <div class="mt-2">        
