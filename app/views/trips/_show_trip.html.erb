@@ -3,7 +3,7 @@
         <h1 class="m-3"><%= @trip.name %> Trip<h1>
     </div>
 
-    <div class=" flex items-end justify-end sm:items-center sm:text-xs mb-5 space-x-3">
+    <div class=" flex items-end justify-end sm:items-center mb-5 space-x-3">
         <%= link_to "<- Back to trips", trips_path,
          class:"text-teal-500 bg-teal-100 p-3 rounded font-bold",
          data: {turbo_frame: "_top"} %>
@@ -13,7 +13,7 @@
         data: {turbo_method: :delete, turbo_confirm: "Are your sure ?",
         turbo_frame: "_top"},
         class: "bg-red-100 text-red-500 p-3 rounded font-bold" %>
-    </div><hr>
+    </div>
 
     <div class="mt-2">        
             <div class="border-l-4 border-slate-500 bg-gray-200 p-3 text-gray-600 font-bold">

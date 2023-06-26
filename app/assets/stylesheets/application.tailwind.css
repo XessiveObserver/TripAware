@@ -18,7 +18,7 @@
         shadow-sm border-gray-300 focus:outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-500 ;
   }
   .rich-text {
-    @apply rounded h-full form-textarea w-full relative  text-gray-700 font-normal
+    @apply row-span-full rounded h-full form-textarea w-full relative  text-gray-700 font-normal
         shadow-sm border-gray-300 focus:outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-500 ;
   }
   .password-field {
