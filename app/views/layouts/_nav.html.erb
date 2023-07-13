@@ -20,6 +20,10 @@
           >
       <% if user_signed_in? %>
         <li class="md:p-4 py-2 block">
+          <%= link_to 'Trips', trips_path,
+          target: "_top", class: "text-teal-500 underline" %>
+        </li>
+        <li class="md:p-4 py-2 block">
           <%= link_to 'Edit profile', edit_user_registration_path,
           target: "_top", class: "text-teal-500 underline" %>
         </li>
